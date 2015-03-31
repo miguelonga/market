@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  author: MyString
+  brand: MyString
   description: MyText
   price: 1
 
 two:
   name: MyString
-  author: MyString
+  brand: MyString
   description: MyText
   price: 1

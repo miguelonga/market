@@ -1,8 +1,8 @@
-class CreateBooks < ActiveRecord::Migration
+class CreateBikes < ActiveRecord::Migration
   def change
-    create_table :books do |t|
+    create_table :bikes do |t|
       t.string :name
-      t.string :author
+      t.string :brand
       t.text :description
       t.integer :price
 
