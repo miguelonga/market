@@ -1,4 +1,5 @@
 class BikesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_bike, only: [:show, :edit, :update, :destroy]
 
   # GET /bikes
@@ -24,7 +25,7 @@ class BikesController < ApplicationController
   # POST /bikes
   # POST /bikes.json
   def create
-    @bike = Bike.new(bike_params)
+    @bike = current_user.bikes.new(bike_params)
 
     respond_to do |format|
       if @bike.save
