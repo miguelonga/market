@@ -11,16 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331190155) do
+ActiveRecord::Schema.define(version: 20150401093100) do
 
   create_table "bikes", force: :cascade do |t|
     t.string   "name"
     t.string   "brand"
     t.text     "description"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_two_file_name"
+    t.string   "image_two_content_type"
+    t.integer  "image_two_file_size"
+    t.datetime "image_two_updated_at"
+    t.string   "image_three_file_name"
+    t.string   "image_three_content_type"
+    t.integer  "image_three_file_size"
+    t.datetime "image_three_updated_at"
+    t.string   "image_four_file_name"
+    t.string   "image_four_content_type"
+    t.integer  "image_four_file_size"
+    t.datetime "image_four_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
