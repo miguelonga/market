@@ -5,5 +5,6 @@ class Bike < ActiveRecord::Base
 	has_attached_file :image_two
 	has_attached_file :image_three
 	has_attached_file :image_four
+	acts_as_taggable_on :bike, :parts, :accesories, :lessons
 
 end
